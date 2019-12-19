@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1574190481 source:c:\compile software\mst_kruskal_dsu\main.cpp
-	<iostream>
-	<algorithm>
-	<vector>
-	<utility>
-
