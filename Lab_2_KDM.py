@@ -70,9 +70,9 @@ class Binary_matrix:
         for i in self.a_set_array:
             bin_nums = []
             for j in self.b_set_array:
-                if (i % 2 == 0 and j % 2 == 0) :
+                if (i == j ) :
                     self.relation_array.append((j, i))
-                    self.relation_array.append((i, j))
+                    
                     bin_nums.append(1)
                 else:
                     bin_nums.append(0)
@@ -95,3 +95,5 @@ binary_matrix.make_2()
 binary_matrix.make_3()
 binary_matrix.make_4()
 binary_matrix.make_5()
+
+

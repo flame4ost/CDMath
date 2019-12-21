@@ -13,7 +13,7 @@ x = sorted(x)
 print('X = ', x)
 for i in range(n):
     for j in range(n):
-        if x[i] % 2 + x[j] % 2 == 1:
+        if x[i] == x[j]:
             print('(',x[i],',' ,x[j],')', end='')
             w[i][j] = 1
 print()
