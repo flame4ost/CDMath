@@ -64,10 +64,7 @@ s=H[j][1];
 H[j][1]=H[j+1][1];
 H[j+1][1] =s;
 }
-
-
 cout<<"Matrica dostigimosni otsortirovannoe po ubivaniuy: \n ";
-
 for (int i=0; i<kolreb; i++) {
 cout<<H[i][0] <<"-->";
 cout<<H[i][1] <<" = ";
@@ -78,7 +75,6 @@ for (int i=0; i<kolreb; i++) {
 H[i][0]--;
 H[i][1]--;
 }
-
 K=new tint [n];
 for (int i=0; i<n; i++)
 K [i] =new int [2];
@@ -112,7 +108,6 @@ T[H[i][1]][H[i][0]]=H[i][2];
 if ((K[H[i][0]][1]>0 && K[H[i][1]][1]==0)
 || (K[H[i][0]][1]==0 && K[H[i][1]][1] >0))
 {
-
 if(K[H[i][0]][1]!=0)
 K[H[i][1]][1]=K[H[i][0]][1];
 if(K[H[i][1]][1]!=0)
@@ -155,7 +150,7 @@ cout<<L [i][2] <<"\n ";
 int b=0;
 for (int i=0; i<kolreb; i++)
 b+=L [i] [2];
-cout<<endl <<" Stoimost dereva = "<<b; // âûâîä ñòîèìîñòè
+cout<<endl <<" Stoimost dereva = "<<b;
 return 0;
 system("pause");
 }
