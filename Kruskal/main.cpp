@@ -1,23 +1,21 @@
+
 #include <cstdio>
 #include <iostream>
 #include <cstdlib>
 using namespace std;
 
-typedef int* tint; // указатель на int
+typedef int* tint; 
 
 int main ()
-{ // int max=100; // Максимальный вес ребра
-
-int n; // количество вершин
-tint* G; // исходный граф
-tint* H; // матрица списка ребер с весом
-tint* K; /*матрица, отмечающая принадлежность
-
-вершины компоненте*/
-
-tint* T; // матрица остовного дерева
-tint* L; // список ребер с ценами минимального дерева
+{ // int max=100; 
+int n; 
+tint* G; 
+tint* H; 
+tint* K; 
+tint* T; 
+tint* L; 
 int max;
+  
 cout<<" Maximalno dopustimoe zna4enie vesa rebra = ";
 cin>> max;
 cout<<"\n Vvedite 4ilo vershin: \n ";
@@ -67,7 +65,6 @@ H[j][1]=H[j+1][1];
 H[j+1][1] =s;
 }
 
-// вывод ребер отсортированных по возрастанию веса
 
 cout<<"Matrica dostigimosni otsortirovannoe po ubivaniuy: \n ";
 
@@ -82,8 +79,6 @@ H[i][0]--;
 H[i][1]--;
 }
 
-// матрица для определения компоненты
-
 K=new tint [n];
 for (int i=0; i<n; i++)
 K [i] =new int [2];
@@ -97,18 +92,15 @@ T[i]=new int [n];
 for (int i=0; i<n; i++)
 for (int j=0; j<n; j++)
 T[i][j]=0;
-// -присоединение первого ребра
 T[H[0][0]][H[0][1]]=H [0][2];
 T[H[0][1]][H[0][0]]=H[0][2];
 K[H[0][0]][1]=1;
 K[H[0][1]][1]=1;
-int m=2; // номер компоненты
-for(int i=1;i<kolreb;i++) // пройти по всем ребрам
+int m=2;
+for(int i=1;i<kolreb;i++)
 if(K[H[i][0]][1]!=K[H[i][1]][1])
-// если 2 вершины не из одной компоненты
 {
 if (K [H [i] [0]] [1] >0 && K [H [i] [1]] [1] >0)
-// если обе вершины принадлежат разной компоненте
 {
 for (int j=0; j<n; j++)
 if (K [H [i] [1]] [1] ==K [j] [1])
@@ -119,7 +111,6 @@ T[H[i][1]][H[i][0]]=H[i][2];
 }
 if ((K[H[i][0]][1]>0 && K[H[i][1]][1]==0)
 || (K[H[i][0]][1]==0 && K[H[i][1]][1] >0))
-// если одна вершина имеет компоненту а др. нет
 {
 
 if(K[H[i][0]][1]!=0)
@@ -130,7 +121,6 @@ T [H[i][0]][H[i][1]]=H[i][2];
 T [H[i][1]][H[i][0]]=H[i][2];
 }
 if(K[H[i][0]][1]==0&&K[H[i][1]][1]==0)
-// если обе вершины не имели компоненты
 {
 K[H[i][0]][1]=m;
 K[H[i][1]][1]=m;
@@ -138,7 +128,7 @@ T[H[i][0]][H[i][1]]=H[i][2];
 T[H[i][1]][H[i][0]]=H[i][2];
 m++;
 }
-} // конец проверки всех ребер
+} 
 kolreb=0;
 for(int i=1; i<n; i++)
 for(int j=0; j<i; j++)
@@ -165,7 +155,7 @@ cout<<L [i][2] <<"\n ";
 int b=0;
 for (int i=0; i<kolreb; i++)
 b+=L [i] [2];
-cout<<endl <<" Stoimost dereva = "<<b; // вывод стоимости
+cout<<endl <<" Stoimost dereva = "<<b; // ГўГ»ГўГ®Г¤ Г±ГІГ®ГЁГ¬Г®Г±ГІГЁ
 return 0;
 system("pause");
 }
