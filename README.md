@@ -1,2 +1,2 @@
-# ComputerDiscreteMathematics
-Написание кода для лабораторных на C++, Python, Pascal к заданиям.
+# CDMath
+Code for laboratory work in C ++, Python, Pascal.
