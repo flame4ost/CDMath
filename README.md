@@ -1,2 +1,4 @@
 # CDMath
-Code for laboratory work in C ++, Python, Pascal.
+# Laboratory work C ++, Python, Pascal.
+# Комп'ютерна Дискретна Математика
+# Викладач: Мірошкіна Ірина Володимирівна
